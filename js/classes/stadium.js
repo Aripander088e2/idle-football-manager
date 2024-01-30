@@ -4,10 +4,10 @@ class Stadium{
         this.attendance = new Decimal(0);
         this.upgrades = {
             //planned 9x money per division, 4x ticket money per division (division number + upgrade)
-            capacity: new MoneyUpgrade(level => Decimal.pow(9, level / 10).mul(1250)
+            capacity: new MoneyUpgrade(level => Decimal.pow(3, level / 10).mul(1250)
                                 .mul(Decimal.pow(1.1, Math.max(0, level - 45))),
                 //4x ticket price -> need 9 / 4x more capacity
-                level => new Decimal(450 * level).mul(Decimal.pow((9 / 4), (level - 1) / 10)).floor(), {
+                level => new Decimal(450 * level).mul(Decimal.pow((5 / 4), (level - 1) / 10)).floor(), {
                     getEffectDisplay: effectDisplayTemplates.numberStandard(0, "")
                 }),
             ticketPrice: new MoneyUpgrade(level => Decimal.pow(9, level / 5).mul(3300)
