@@ -10,7 +10,7 @@ class PlayerTraining{
 
         this.upgrades = {
             trainSpeed: new MoneyUpgrade(level => Decimal.pow(1.12, level).mul(1e9),
-                level => new Decimal(1 + 0.15 * level), {
+                level => new Decimal(1 + 1.5 * level), {
                     getEffectDisplay: effectDisplayTemplates.percentStandard(0)
                 }),
             generalTraining: new MoneyUpgrade(level => Decimal.pow(1.25, level).mul(1e9),
