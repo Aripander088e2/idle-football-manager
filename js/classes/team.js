@@ -1,4 +1,4 @@
-45class Team {
+class Team {
     constructor(name, players, divisionRank, country, seed) {
         this.name = name;
         this.players = players;
