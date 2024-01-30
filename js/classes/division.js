@@ -8,7 +8,7 @@ class Division {
     }
 
     getName(){
-        return ["Newbie", "Rookie", "Starting", "Average", "Intermediate", "Veteran", "Pro", "Super", "Mega", "Master"][this.rank] + " League";
+        return ["Newbie", "Rookie", "Starting", "Average", "Intermediate", "Veteran", "Pro", "Super", "Mega", "Master", "Insanity", "NoMansLand"][this.rank] + " League";
     }
 
     getRewards(){
