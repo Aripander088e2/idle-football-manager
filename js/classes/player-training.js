@@ -9,17 +9,17 @@ class PlayerTraining{
         };
 
         this.upgrades = {
-            trainSpeed: new MoneyUpgrade(level => Decimal.pow(1.25, level).mul(1e10),
+            trainSpeed: new MoneyUpgrade(level => Decimal.pow(1.12, level).mul(1e9),
                 level => new Decimal(1 + 0.15 * level), {
                     getEffectDisplay: effectDisplayTemplates.percentStandard(0)
                 }),
-            generalTraining: new MoneyUpgrade(level => Decimal.pow(1.75, level).mul(1e11),
+            generalTraining: new MoneyUpgrade(level => Decimal.pow(1.25, level).mul(1e9),
                 level => new Decimal(0.05 + 0.05 * level), {
                 getEffectDisplay: effectDisplayTemplates.percentStandard()
                 }),
             longetivity: new MoneyUpgrade(level => Decimal.pow(3, level).mul(1e15),
                 level => new Decimal(0.001 * level), {
-                    maxLevel: 20,
+                    maxLevel: 20000,
                     getEffectDisplay: effectDisplayTemplates.percentStandard(1)
                 })
         }
