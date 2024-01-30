@@ -25,9 +25,9 @@ let game = {
                 maxLevel: 120
             }),
         //-> 9x money per division, ~11x player price per division
-        matchRewards: new MoneyUpgrade(level => Decimal.pow(9, level / 4).mul(100000),
+        matchRewards: new MoneyUpgrade(level => Decimal.pow(9, level / 4).mul(10000),
             level => (9 / 6) ** (level / 4)),
-        cheaperPlayers: new MoneyUpgrade(level => Decimal.pow(7, level / 3).mul(1000000),
+        cheaperPlayers: new MoneyUpgrade(level => Decimal.pow(7, level / 3).mul(100000),
             level => 1 / 1.02 ** level),
         playerRegeneration: new MoneyUpgrade(level => Decimal.pow(1.25, level).mul(5000000),
             level => new Decimal(1 + 0.05 * level), {
@@ -39,10 +39,10 @@ let game = {
     tv: {
         isUnlocked: () => game.maxDivisionRank >= 8 || game.country >= 1,
         channels: [
-            new TVChannel("FootForce TV", new Decimal(1e12), 0.25 / 5400, new Decimal(1.5)),
-            new TVChannel("GOALUnited", new Decimal(1.777e16), 0.4 / 5400, new Decimal(2)),
-            new TVChannel("Futebol Mágico", new Decimal(2.222e22), 0.7 / 5400, new Decimal(3)),
-            new TVChannel("Channel 44", new Decimal(1e30), 1 / 5400, new Decimal(5))
+            new TVChannel("FootForce TV", new Decimal(1e12), 2.5 / 5400, new Decimal(15)),
+            new TVChannel("GOALUnited", new Decimal(1.777e16), 4 / 5400, new Decimal(20)),
+            new TVChannel("Futebol Mágico", new Decimal(2.222e22), 7 / 5400, new Decimal(30)),
+            new TVChannel("Channel 44", new Decimal(1e30), 10 / 5400, new Decimal(50))
         ],
         upgrades: {
             matchReward: new MoneyUpgrade(level => Decimal.pow(2, level).mul(1e10),
