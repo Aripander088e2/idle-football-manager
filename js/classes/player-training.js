@@ -30,7 +30,7 @@ class PlayerTraining{
     }
 
     getMaxPlayers(){
-        return 1;
+        return 7;
     }
 
     addPlayer(player){
