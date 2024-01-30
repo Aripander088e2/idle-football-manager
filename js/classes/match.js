@@ -4,7 +4,7 @@ class Match {
     constructor(team1, team2, divisionRank){
         this.divisionRank = divisionRank;
         this.time = 0;
-        this.timeScale = 1;
+        this.timeScale = 10;
         this.team1 = team1;
         this.team2 = team2;
         this.score1 = 0;
