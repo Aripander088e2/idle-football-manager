@@ -73,9 +73,9 @@ class Team {
     }
 
     getRedCardChance(){
-        let base = 0.000000003;
+        let base = 0.0000003;
         if(this.aggressivity === Strategy.OFFENSIVE){
-            base *= 2;
+            base *= 200;
         }
         else if(this.aggressivity === Strategy.DEFENSIVE){
             base /= 2;
