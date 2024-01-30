@@ -104,7 +104,7 @@ class Team {
             stats.defense = stats.defense.mul(26);
         }
         if(this.aggressivity === Strategy.OFFENSIVE){
-            stats.attack = stats.attack.mul(12);
+            stats.attack = stats.attack.mul(121);
             stats.defense = stats.defense.mul(121);
         }
         else if(this.aggressivity === Strategy.DEFENSIVE){
