@@ -1,7 +1,7 @@
 let game = {
     init: false,
     numberFormatter: new ADNotations.StandardNotation(),
-    money: new Decimal(25000),
+    money: new Decimal(2500000000),
     team: null,
     currentMatch: null,
     nextMatch: null,
@@ -22,7 +22,7 @@ let game = {
     moneyUpgrades:{
         matchSpeed: new MoneyUpgrade(level => Decimal.pow(3, level).mul(10000),
             level => 300 * (320 / 300) ** level, {
-                maxLevel: 12
+                maxLevel: 120
             }),
         //-> 9x money per division, ~11x player price per division
         matchRewards: new MoneyUpgrade(level => Decimal.pow(9, level / 4).mul(100000),
@@ -53,7 +53,7 @@ let game = {
                 level => new Decimal(1 + 0.1 * level)),
             matchSpeed: new MoneyUpgrade(level => Decimal.pow(4, level).mul(1e15),
                 level => 1.1 ** level, {
-                    maxLevel: 10
+                    maxLevel: 40
                 })
         }
     },
