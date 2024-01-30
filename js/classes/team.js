@@ -1,4 +1,4 @@
-class Team {
+45class Team {
     constructor(name, players, divisionRank, country, seed) {
         this.name = name;
         this.players = players;
@@ -73,7 +73,7 @@ class Team {
     }
 
     getRedCardChance(){
-        let base = 0.000003;
+        let base = 0.000000003;
         if(this.aggressivity === Strategy.OFFENSIVE){
             base *= 2;
         }
@@ -85,7 +85,7 @@ class Team {
 
     //less players -> less synergy; encourages filling the team; 50% to 150%
     getSynergy(){
-        return 0.25 + 0.75 * (this.getActivePlayingPlayers().length / 11) ** 2;
+        return 0.25 + 0.75 * (this.getActivePlayingPlayers().length / 1.5) ** 2;
     }
 
     getCombinedStats() {
