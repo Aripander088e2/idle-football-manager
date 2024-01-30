@@ -85,7 +85,7 @@ class Team {
 
     //less players -> less synergy; encourages filling the team; 50% to 150%
     getSynergy(){
-        return 0.25 + 0.75 * (this.getActivePlayingPlayers().length / 1.5) ** 2;
+        return 0.25 + 0.75 * (this.getActivePlayingPlayers().length / 11) ** 2;
     }
 
     getCombinedStats() {
@@ -96,20 +96,20 @@ class Team {
             stats.defense = stats.defense.add(p.getDefense().mul(synergy));
         }
         if(this.strategy === Strategy.OFFENSIVE){
-            stats.attack = stats.attack.mul(1.3);
-            stats.defense = stats.defense.div(1.3);
+            stats.attack = stats.attack.mul(13);
+            stats.defense = stats.defense.mul(13);
         }
         else if(this.strategy === Strategy.DEFENSIVE){
-            stats.attack = stats.attack.div(1.3);
-            stats.defense = stats.defense.mul(1.3);
+            stats.attack = stats.attack.mul(13);
+            stats.defense = stats.defense.mul(26);
         }
         if(this.aggressivity === Strategy.OFFENSIVE){
-            stats.attack = stats.attack.mul(1.1);
-            stats.defense = stats.defense.mul(1.1);
+            stats.attack = stats.attack.mul(12);
+            stats.defense = stats.defense.mul(121);
         }
         else if(this.aggressivity === Strategy.DEFENSIVE){
-            stats.attack = stats.attack.div(1.1);
-            stats.defense = stats.defense.div(1.1);
+            stats.attack = stats.attack.div(11);
+            stats.defense = stats.defense.div(11);
         }
         return stats;
     }
